@@ -74,6 +74,11 @@ const eth: NetworkUserConfig = {
   accounts: [process.env.KEY_ETH!],
 }
 
+const modeTestnet: NetworkUserConfig = {
+  url: "https://sepolia.mode.network/",
+  chainId: 919,
+  accounts: [process.env.PRIVATE_KEY!],
+};
 export default {
   networks: {
     hardhat: {
@@ -83,6 +88,7 @@ export default {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MODE && { modeTestnet }),
     // mainnet: bscMainnet,
   },
   etherscan: {
