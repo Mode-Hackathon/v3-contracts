@@ -20,10 +20,7 @@ abstract contract StableSwapRouter is IStableSwapRouter, PeripheryPaymentsWithFe
 
     event SetStableSwap(address indexed factory, address indexed info);
 
-    constructor(
-        address _stableSwapFactory,
-        address _stableSwapInfo
-    ) {
+    constructor(address _stableSwapFactory, address _stableSwapInfo) {
         stableSwapFactory = _stableSwapFactory;
         stableSwapInfo = _stableSwapInfo;
     }
@@ -32,10 +29,7 @@ abstract contract StableSwapRouter is IStableSwapRouter, PeripheryPaymentsWithFe
      * @notice Set Pancake Stable Swap Factory and Info
      * @dev Only callable by contract owner
      */
-    function setStableSwap(
-        address _factory,
-        address _info
-    ) external onlyOwner {
+    function setStableSwap(address _factory, address _info) external onlyOwner {
         require(_factory != address(0) && _info != address(0));
 
         stableSwapFactory = _factory;
@@ -45,23 +39,25 @@ abstract contract StableSwapRouter is IStableSwapRouter, PeripheryPaymentsWithFe
     }
 
     /// `refundETH` should be called at very end of all swaps
-    function _swap(
-        address[] memory path,
-        uint256[] memory flag
-    ) private {
+    function _swap(address[] memory path, uint256[] memory flag) private {
         require(path.length - 1 == flag.length);
-        
+
         for (uint256 i; i < flag.length; i++) {
             (address input, address output) = (path[i], path[i + 1]);
-            (uint256 k, uint256 j, address swapContract) = SmartRouterHelper.getStableInfo(stableSwapFactory, input, output, flag[i]); 
+            (uint256 k, uint256 j, address swapContract) = SmartRouterHelper.getStableInfo(
+                stableSwapFactory,
+                input,
+                output,
+                flag[i]
+            );
             uint256 amountIn_ = IERC20(input).balanceOf(address(this));
             TransferHelper.safeApprove(input, swapContract, amountIn_);
             IStableSwap(swapContract).exchange(k, j, amountIn_, 0);
         }
     }
 
-    /** 
-     * @param flag token amount in a stable swap pool. 2 for 2pool, 3 for 3pool    
+    /**
+     * @param flag token amount in a stable swap pool. 2 for 2pool, 3 for 3pool
      */
     function exactInputStableSwap(
         address[] calldata path,
@@ -96,8 +92,8 @@ abstract contract StableSwapRouter is IStableSwapRouter, PeripheryPaymentsWithFe
         if (to != address(this)) pay(address(dstToken), address(this), to, amountOut);
     }
 
-    /** 
-     * @param flag token amount in a stable swap pool. 2 for 2pool, 3 for 3pool    
+    /**
+     * @param flag token amount in a stable swap pool. 2 for 2pool, 3 for 3pool
      */
     function exactOutputStableSwap(
         address[] calldata path,
@@ -117,6 +113,6 @@ abstract contract StableSwapRouter is IStableSwapRouter, PeripheryPaymentsWithFe
         if (to == Constants.MSG_SENDER) to = msg.sender;
         else if (to == Constants.ADDRESS_THIS) to = address(this);
 
-        if (to != address(this)) pay(path[path.length - 1], address(this), to, amountOut);    
+        if (to != address(this)) pay(path[path.length - 1], address(this), to, amountOut);
     }
 }

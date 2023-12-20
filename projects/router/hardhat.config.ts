@@ -139,6 +139,10 @@ const config: HardhatUserConfig = {
         version: '0.7.6',
         settings: {},
       },
+      'contracts/libraries/OracleLibrary.sol': {
+        version: '0.7.6',
+        settings: {},
+      },
     },
   },
   paths: {
