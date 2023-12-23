@@ -37,6 +37,11 @@ const eth: NetworkUserConfig = {
   chainId: 1,
   accounts: [process.env.KEY_ETH!],
 };
+const modeTestnet: NetworkUserConfig = {
+  url: "https://sepolia.mode.network/",
+  chainId: 919,
+  accounts: [process.env.KEY_MODE!],
+};
 
 const config = {
   defaultNetwork: "hardhat",
@@ -46,6 +51,7 @@ const config = {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    modeTestnet
     // testnet: bscTestnet,
     // mainnet: bscMainnet,
   },
@@ -59,7 +65,7 @@ const config = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 999,
+            runs: 200,
           },
         },
       },

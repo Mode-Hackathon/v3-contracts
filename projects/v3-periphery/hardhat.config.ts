@@ -12,10 +12,10 @@ require('dotenv').config({ path: require('find-config')('.env') })
 const LOW_OPTIMIZER_COMPILER_SETTINGS = {
   version: '0.7.6',
   settings: {
-    evmVersion: 'istanbul',
+    evmVersion: 'berlin',
     optimizer: {
       enabled: true,
-      runs: 2_000,
+      runs: 200,
     },
     metadata: {
       bytecodeHash: 'none',
@@ -26,10 +26,10 @@ const LOW_OPTIMIZER_COMPILER_SETTINGS = {
 const LOWEST_OPTIMIZER_COMPILER_SETTINGS = {
   version: '0.7.6',
   settings: {
-    evmVersion: 'istanbul',
+    evmVersion: 'berlin',
     optimizer: {
       enabled: true,
-      runs: 1_000,
+      runs: 200,
     },
     metadata: {
       bytecodeHash: 'none',
@@ -40,10 +40,10 @@ const LOWEST_OPTIMIZER_COMPILER_SETTINGS = {
 const DEFAULT_COMPILER_SETTINGS = {
   version: '0.7.6',
   settings: {
-    evmVersion: 'istanbul',
+    evmVersion: 'berlin',
     optimizer: {
       enabled: true,
-      runs: 1_000_000,
+      runs: 200,
     },
     metadata: {
       bytecodeHash: 'none',
@@ -74,6 +74,12 @@ const eth: NetworkUserConfig = {
   chainId: 1,
   accounts: [process.env.KEY_ETH!],
 }
+const modeTestnet: NetworkUserConfig = {
+  url: "https://sepolia.mode.network/",
+  chainId: 919,
+  accounts: [process.env.KEY_MODE!],
+  gasPrice: 9000000000,
+};
 
 export default {
   networks: {
@@ -84,6 +90,7 @@ export default {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MODE && { modeTestnet }),
     // mainnet: bscMainnet,
   },
   etherscan: {

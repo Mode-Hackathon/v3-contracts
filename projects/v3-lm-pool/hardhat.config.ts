@@ -6,6 +6,13 @@ import { NetworkUserConfig } from 'hardhat/types'
 import 'solidity-docgen';
 require('dotenv').config({ path: require('find-config')('.env') })
 
+const modeTestnet: NetworkUserConfig = {
+  url: "https://sepolia.mode.network/",
+  chainId: 919,
+  accounts: [process.env.KEY_MODE!],
+  gasPrice: 1000000000,
+};
+
 const bscTestnet: NetworkUserConfig = {
   url: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
   chainId: 97,
@@ -40,6 +47,7 @@ const config: HardhatUserConfig = {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MODE && { modeTestnet }),
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,

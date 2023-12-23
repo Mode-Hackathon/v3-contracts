@@ -1,19 +1,1685 @@
 {
   "MasterChefV3": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-  "SmartRouter": "0x5579c645590c58E6421341394f82B5b38080cDEA",
-  "SmartRouterHelper": "0xA2b9C533b5333c1fEc593DA3Dbe1229627490622",
-  "MixedRouteQuoterV1": "0x0a7DE23cF80aBA83Ca5d4a429D80E1224b3dCC91",
+  "SmartRouter": "0xb71E92483cBF7a4F6236A127c52B4f7a6B5aB98c",
+  "SmartRouterHelper": "0x641750F97c49A35944Ac91a7A77F080cefC87781",
+  "MixedRouteQuoterV1": "0x866DDEF785fd008212EdD1943589adde3587fE31",
   "QuoterV2": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
-  "TokenValidator": "0x023108300557958e6eEf0DCc69e2D3804A6F13a1",
+  "TokenValidator": "0x3Af245518bD600Bbfb7133a7f0758471d964fae1",
+  "stableFactory": "0xB4f0C5b9e6D66a6421465c2f82150c546DE87150",
+  "swapInfo": {
+    "bytecode": "0x608060405234801561001057600080fd5b50611ffe806100206000396000f3fe608060405234801561001057600080fd5b50600436106100d05760003560e01c80630d098fa9146100d557806315a4d7fe146100fe5780631f38b0c7146101115780632494acbd14610132578063279a07cc1461014557806327e235e314610158578063293577501461016b5780635779dcd8146101805780636c92118e146101935780636d46a1db146101a6578063aaf5eb68146101c6578063ae6452b4146101ce578063b6f03ac1146101e1578063ca4bc714146101f4578063d73792a914610207578063f74d92e71461020f575b600080fd5b6100e86100e3366004611cd3565b610222565b6040516100f59190611e3a565b60405180910390f35b6100e861010c366004611d46565b6105e9565b61012461011f366004611da5565b610733565b6040516100f5929190611fa2565b6100e8610140366004611c94565b610931565b6100e8610153366004611c94565b6109e0565b6100e8610166366004611c94565b610a89565b610173610b32565b6040516100f59190611f99565b61017361018e366004611d71565b610b37565b6100e86101a1366004611cd3565b610bd4565b6101b96101b4366004611c94565b610e99565b6040516100f59190611e6b565b610173610f0c565b6100e86101dc366004611cd3565b610f18565b6101736101ef366004611cd3565b610f8b565b610173610202366004611ddf565b611322565b6101736114b2565b61017361021d366004611d08565b6114bb565b61022a611c08565b6000839050600060016002036004026002836001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b15801561027457600080fd5b505afa158015610288573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102ac9190611e22565b02816102b457fe5b0490506000826001600160a01b031663fee3f7f96040518163ffffffff1660e01b815260040160206040518083038186803b1580156102f257600080fd5b505afa158015610306573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061032a9190611e22565b90506000836001600160a01b031663f446c1d06040518163ffffffff1660e01b815260040160206040518083038186803b15801561036757600080fd5b505afa15801561037b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061039f9190611e22565b905060006103ac88610e99565b6001600160a01b03166318160ddd6040518163ffffffff1660e01b815260040160206040518083038186803b1580156103e457600080fd5b505afa1580156103f8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061041c9190611e22565b905060008061042a8a610a89565b905082156104405761043d8a82866114bb565b91505b600060405180604001604052808360006002811061045a57fe5b602002015181526020018360016002811061047157fe5b60200201519052905060005b600281101561050057846104c45760008b826002811061049957fe5b6020020151116104c45760405162461bcd60e51b81526004016104bb90611f57565b60405180910390fd5b8a81600281106104d057fe5b60200201518382600281106104e157fe5b6020020151018282600281106104f357fe5b602002015260010161047d565b50600061050e8c83886114bb565b905083811161052f5760405162461bcd60e51b81526004016104bb90611ed5565b84156105da5760005b60028110156105d85760008585836002811061055057fe5b602002015184028161055e57fe5b049050600084836002811061056f57fe5b60200201518211156105955784836002811061058757fe5b6020020151820390506105ab565b818584600281106105a257fe5b60200201510390505b6402540be400818c02819004908b8202048e85600281106105c857fe5b6020020152505050600101610538565b505b50505050505050505092915050565b6105f1611c08565b60006105fc84610e99565b6001600160a01b03166318160ddd6040518163ffffffff1660e01b815260040160206040518083038186803b15801561063457600080fd5b505afa158015610648573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061066c9190611e22565b9050610676611c08565b60005b60028110156107285760008386886001600160a01b0316634903b0d1856040518263ffffffff1660e01b81526004016106b29190611f99565b60206040518083038186803b1580156106ca57600080fd5b505afa1580156106de573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107029190611e22565b028161070a57fe5b0490508083836002811061071a57fe5b602002015250600101610679565b509150505b92915050565b600080858161074182610a89565b9050600061074f8983610f18565b9050600061075c8a610931565b90506000670de0b6b3a7640000828b6002811061077557fe5b602002015189028161078357fe5b04838b6002811061079057fe5b602002015101905060006107a78c8c8c85886114d8565b90506000600182868d600281106107ba57fe5b60200201510303905060006402540be400886001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b15801561080457600080fd5b505afa158015610818573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061083c9190611e22565b83028161084557fe5b04905060006402540be400896001600160a01b031663fee3f7f96040518163ffffffff1660e01b815260040160206040518083038186803b15801561088957600080fd5b505afa15801561089d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108c19190611e22565b8302816108ca57fe5b049050858d600281106108d957fe5b6020020151670de0b6b3a76400008302816108f057fe5b049150858d600281106108ff57fe5b6020020151670de0b6b3a764000082028161091657fe5b049050819a5080995050505050505050505094509492505050565b610939611c08565b60005b60028110156109da576040516318880f5d60e21b81526001600160a01b038416906362203d7490610971908490600401611f99565b60206040518083038186803b15801561098957600080fd5b505afa15801561099d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109c19190611e22565b8282600281106109cd57fe5b602002015260010161093c565b50919050565b6109e8611c08565b60005b60028110156109da57604051631f6be8d960e21b81526001600160a01b03841690637dafa36490610a20908490600401611f99565b60206040518083038186803b158015610a3857600080fd5b505afa158015610a4c573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a709190611e22565b828260028110610a7c57fe5b60200201526001016109eb565b610a91611c08565b60005b60028110156109da57604051634903b0d160e01b81526001600160a01b03841690634903b0d190610ac9908490600401611f99565b60206040518083038186803b158015610ae157600080fd5b505afa158015610af5573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b199190611e22565b828260028110610b2557fe5b6020020152600101610a94565b600281565b60008381610b46828686611657565b9150506402540be400826001600160a01b031663fee3f7f96040518163ffffffff1660e01b815260040160206040518083038186803b158015610b8857600080fd5b505afa158015610b9c573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bc09190611e22565b820281610bc957fe5b049695505050505050565b610bdc611c08565b6000839050600060016002036004026002836001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b158015610c2657600080fd5b505afa158015610c3a573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c5e9190611e22565b0281610c6657fe5b0490506000826001600160a01b031663fee3f7f96040518163ffffffff1660e01b815260040160206040518083038186803b158015610ca457600080fd5b505afa158015610cb8573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610cdc9190611e22565b90506000836001600160a01b031663f446c1d06040518163ffffffff1660e01b815260040160206040518083038186803b158015610d1957600080fd5b505afa158015610d2d573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d519190611e22565b90506000610d5e88610a89565b90506000604051806040016040528083600060028110610d7a57fe5b6020020151815260200183600160028110610d9157fe5b6020020151905290506000610da78a84866114bb565b905060005b6002811015610de657898160028110610dc157fe5b6020020151838260028110610dd257fe5b602002018051919091039052600101610dac565b506000610df48b84876114bb565b905060005b60028110156105da57600083868360028110610e1157fe5b6020020151840281610e1f57fe5b0490506000858360028110610e3057fe5b6020020151821115610e5657858360028110610e4857fe5b602002015182039050610e6c565b81868460028110610e6357fe5b60200201510390505b6402540be400818b02819004908a8202048d8560028110610e8957fe5b6020020152505050600101610df9565b6000816001600160a01b031663fc0c546a6040518163ffffffff1660e01b815260040160206040518083038186803b158015610ed457600080fd5b505afa158015610ee8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061072d9190611cb7565b670de0b6b3a764000081565b610f20611c08565b610f2983610931565b905060005b6002811015610f8457670de0b6b3a7640000838260028110610f4c57fe5b6020020151838360028110610f5d57fe5b60200201510281610f6a57fe5b04828260028110610f7757fe5b6020020152600101610f2e565b5092915050565b600082610f96611c08565b600060016002036004026002846001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b158015610fdb57600080fd5b505afa158015610fef573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906110139190611e22565b028161101b57fe5b0490506000836001600160a01b031663f446c1d06040518163ffffffff1660e01b815260040160206040518083038186803b15801561105957600080fd5b505afa15801561106d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906110919190611e22565b9050600061109e88610e99565b6001600160a01b03166318160ddd6040518163ffffffff1660e01b815260040160206040518083038186803b1580156110d657600080fd5b505afa1580156110ea573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061110e9190611e22565b905060008061111c8a610a89565b905082156111325761112f8a82866114bb565b91505b600060405180604001604052808360006002811061114c57fe5b602002015181526020018360016002811061116357fe5b60200201519052905060005b60028110156111e957846111ad5760008b826002811061118b57fe5b6020020151116111ad5760405162461bcd60e51b81526004016104bb90611f57565b8a81600281106111b957fe5b60200201518382600281106111ca57fe5b6020020151018282600281106111dc57fe5b602002015260010161116f565b5060006111f78c83886114bb565b90508381116112185760405162461bcd60e51b81526004016104bb90611ed5565b8085156112f25760005b60028110156112e35760008686836002811061123a57fe5b602002015185028161124857fe5b049050600085836002811061125957fe5b602002015182111561127f5785836002811061127157fe5b602002015182039050611295565b8186846002811061128c57fe5b60200201510390505b6402540be4008b8202048c84600281106112ab57fe5b60200201528b83600281106112bc57fe5b60200201518684600281106112cd57fe5b6020020180519190910390525050600101611222565b506112ef8d84896114bb565b90505b600086611300575081611311565b8586830388028161130d57fe5b0490505b9d9c50505050505050505050505050565b6000858161132f82610a89565b9050600061133d8983610f18565b90506000836001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b15801561137a57600080fd5b505afa15801561138e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906113b29190611e22565b6402540be400036402540be4008802816113c857fe5b0490508288600281106113d757fe5b602002015181106113fa5760405162461bcd60e51b81526004016104bb90611e7f565b60006114058b610931565b90506000670de0b6b3a7640000828b6002811061141e57fe5b602002015184028161142c57fe5b04848b6002811061143957fe5b602002015103905060006114508d8c8e85896114d8565b90506000858d6002811061146057fe5b602002015182039050838d6002811061147557fe5b6020020151670de0b6b3a764000082028161148c57fe5b046001019050898111156113115760405162461bcd60e51b81526004016104bb90611f09565b6402540be40081565b60006114d06114ca8585610f18565b8361193f565b949350505050565b6000808690506000816001600160a01b031663f446c1d06040518163ffffffff1660e01b815260040160206040518083038186803b15801561151957600080fd5b505afa15801561152d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906115519190611e22565b9050600061155f858361193f565b90508060006002840281805b60028110156115c6578c811415611584578a91506115a8565b8b81146115a35789816002811061159757fe5b602002015191506115a8565b6115be565b9281019260028202858702816115ba57fe5b0494505b60010161156b565b5060028202858502816115d557fe5b04935060008286816115e357fe5b0484019050600086815b60ff81101561164357819250888483600202010388838402018161160d57fe5b0491508282111561162c5760018383031161162757611643565b61163b565b60018284031161163b57611643565b6001016115ed565b509f9e505050505050505050505050505050565b60008060008590506000816001600160a01b031663f446c1d06040518163ffffffff1660e01b815260040160206040518083038186803b15801561169a57600080fd5b505afa1580156116ae573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906116d29190611e22565b9050600060016002036004026002846001600160a01b031663ddca3f436040518163ffffffff1660e01b815260040160206040518083038186803b15801561171957600080fd5b505afa15801561172d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906117519190611e22565b028161175957fe5b0490506000611767896109e0565b905060006117748a611a2c565b90506000611782828661193f565b9050600061178f8c610e99565b6001600160a01b03166318160ddd6040518163ffffffff1660e01b815260040160206040518083038186803b1580156117c757600080fd5b505afa1580156117db573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906117ff9190611e22565b828c028161180957fe5b048203905082600061181d888d8486611b04565b90506000868d6002811061182d57fe5b602002015182878f6002811061183f57fe5b6020020151038161184c57fe5b04905060005b60028110156118e65760008e82141561188a578387878a856002811061187457fe5b6020020151028161188157fe5b040390506118bb565b868689846002811061189857fe5b602002015102816118a557fe5b048883600281106118b257fe5b60200201510390505b6402540be4008a8202048583600281106118d157fe5b60200201805191909103905250600101611852565b5060006118f58a8f8688611b04565b848f6002811061190157fe5b6020020151039050878e6002811061191557fe5b6020020151600182038161192557fe5b049c50508b90039950505050505050505050935093915050565b60008060005b600281101561196c5784816002811061195a57fe5b60200201519190910190600101611945565b508061197c57600091505061072d565b60008160028502825b60ff811015611a20578260005b60028110156119c45760028a82600281106119a957fe5b602002015102858302816119b957fe5b049150600101611992565b50839450806002600101028460018503020184600283028886020102816119e757fe5b04935084841115611a0757600185850311611a025750611a20565b611a17565b600184860311611a175750611a20565b50600101611985565b50909695505050505050565b611a34611c08565b611a3d82610931565b905060005b60028110156109da57604051634903b0d160e01b8152670de0b6b3a7640000906001600160a01b03851690634903b0d190611a81908590600401611f99565b60206040518083038186803b158015611a9957600080fd5b505afa158015611aad573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190611ad19190611e22565b838360028110611add57fe5b60200201510281611aea57fe5b04828260028110611af757fe5b6020020152600101611a42565b600060028410611b265760405162461bcd60e51b81526004016104bb90611ea7565b8160006002870281805b6002811015611b7b57888114611b5857878160028110611b4c57fe5b60200201519150611b5d565b611b73565b928101926002820285880281611b6f57fe5b0494505b600101611b30565b506002820286850281611b8a57fe5b0493506000828781611b9857fe5b0484019050600087815b60ff811015611bf8578192508984836002020103888384020181611bc257fe5b04915082821115611be157600183830311611bdc57611bf8565b611bf0565b600182840311611bf057611bf8565b600101611ba2565b509b9a5050505050505050505050565b60405180604001604052806002906020820280368337509192915050565b600082601f830112611c36578081fd5b604080519081016001600160401b0381118282101715611c5257fe5b8060405250808385604086011115611c68578384fd5b835b6002811015611c89578135835260209283019290910190600101611c6a565b509195945050505050565b600060208284031215611ca5578081fd5b8135611cb081611fb0565b9392505050565b600060208284031215611cc8578081fd5b8151611cb081611fb0565b60008060608385031215611ce5578081fd5b8235611cf081611fb0565b9150611cff8460208501611c26565b90509250929050565b600080600060808486031215611d1c578081fd5b8335611d2781611fb0565b9250611d368560208601611c26565b9150606084013590509250925092565b60008060408385031215611d58578182fd5b8235611d6381611fb0565b946020939093013593505050565b600080600060608486031215611d85578283fd5b8335611d9081611fb0565b95602085013595506040909401359392505050565b60008060008060808587031215611dba578081fd5b8435611dc581611fb0565b966020860135965060408601359560600135945092505050565b600080600080600060a08688031215611df6578081fd5b8535611e0181611fb0565b97602087013597506040870135966060810135965060800135945092505050565b600060208284031215611e33578081fd5b5051919050565b60408101818360005b6002811015611e62578151835260209283019290910190600101611e43565b50505092915050565b6001600160a01b0391909116815260200190565b6020808252600e908201526d4578636573732062616c616e636560901b604082015260600190565b6020808252601490820152736465763a20692061626f7665204e5f434f494e5360601b604082015260600190565b6020808252601a908201527904431206d7573742062652067726561746572207468616e2044360341b604082015260600190565b6020808252602e908201527f45786368616e676520726573756c74656420696e20666577657220636f696e7360408201526d081d1a185b88195e1c1958dd195960921b606082015260800190565b60208082526022908201527f496e697469616c206465706f73697420726571756972657320616c6c20636f696040820152616e7360f01b606082015260800190565b90815260200190565b918252602082015260400190565b6001600160a01b0381168114611fc557600080fd5b5056fea264697066735822122035057ef86a20a24b4c9eb45f68c57fb4f90d377b29dbe8a4935475ee7b2e66f264736f6c63430007060033",
+    "interface": {
+      "fragments": [
+        {
+          "type": "function",
+          "name": "FEE_DENOMINATOR",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "N_COINS",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "PRECISION",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "PRECISION_MUL",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapPRECISION_MUL",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "RATES",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapRATES",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "_xp_mem",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_balances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "result",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "balances",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapBalances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "calc_coins_amount",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_D_mem",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_balances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            },
+            {
+              "name": "amp",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_add_liquidity_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "liquidityFee",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_add_liquidity_mint_amount",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_dx",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "j",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "dy",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "max_dx",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_exchange_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "j",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "dx",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "exFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "exAdminFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_remove_liquidity_imbalance_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "liquidityFee",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "get_remove_liquidity_one_coin_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_token_amount",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "adminFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        {
+          "type": "function",
+          "name": "token",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        }
+      ],
+      "_abiCoder": {
+        "coerceFunc": null
+      },
+      "functions": {
+        "FEE_DENOMINATOR()": {
+          "type": "function",
+          "name": "FEE_DENOMINATOR",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "N_COINS()": {
+          "type": "function",
+          "name": "N_COINS",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "PRECISION()": {
+          "type": "function",
+          "name": "PRECISION",
+          "constant": true,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "PRECISION_MUL(address)": {
+          "type": "function",
+          "name": "PRECISION_MUL",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapPRECISION_MUL",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "RATES(address)": {
+          "type": "function",
+          "name": "RATES",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapRATES",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "_xp_mem(address,uint256[2])": {
+          "type": "function",
+          "name": "_xp_mem",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_balances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "result",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "balances(address)": {
+          "type": "function",
+          "name": "balances",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "swapBalances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "calc_coins_amount(address,uint256)": {
+          "type": "function",
+          "name": "calc_coins_amount",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_D_mem(address,uint256[2],uint256)": {
+          "type": "function",
+          "name": "get_D_mem",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_balances",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            },
+            {
+              "name": "amp",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_add_liquidity_fee(address,uint256[2])": {
+          "type": "function",
+          "name": "get_add_liquidity_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "liquidityFee",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_add_liquidity_mint_amount(address,uint256[2])": {
+          "type": "function",
+          "name": "get_add_liquidity_mint_amount",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_dx(address,uint256,uint256,uint256,uint256)": {
+          "type": "function",
+          "name": "get_dx",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "j",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "dy",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "max_dx",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_exchange_fee(address,uint256,uint256,uint256)": {
+          "type": "function",
+          "name": "get_exchange_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "j",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "dx",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "exFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "exAdminFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_remove_liquidity_imbalance_fee(address,uint256[2])": {
+          "type": "function",
+          "name": "get_remove_liquidity_imbalance_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "amounts",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "liquidityFee",
+              "type": "uint256[2]",
+              "indexed": null,
+              "components": null,
+              "arrayLength": 2,
+              "arrayChildren": {
+                "name": null,
+                "type": "uint256",
+                "indexed": null,
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null,
+                "baseType": "uint256",
+                "_isParamType": true
+              },
+              "baseType": "array",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "get_remove_liquidity_one_coin_fee(address,uint256,uint256)": {
+          "type": "function",
+          "name": "get_remove_liquidity_one_coin_fee",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            },
+            {
+              "name": "_token_amount",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            },
+            {
+              "name": "i",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": "adminFee",
+              "type": "uint256",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "uint256",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        },
+        "token(address)": {
+          "type": "function",
+          "name": "token",
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_swap",
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "outputs": [
+            {
+              "name": null,
+              "type": "address",
+              "indexed": null,
+              "components": null,
+              "arrayLength": null,
+              "arrayChildren": null,
+              "baseType": "address",
+              "_isParamType": true
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "gas": {
+            "type": "BigNumber",
+            "hex": "0x01ba8140"
+          },
+          "_isFragment": true
+        }
+      },
+      "errors": {},
+      "events": {},
+      "structs": {},
+      "deploy": {
+        "name": null,
+        "type": "constructor",
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "gas": null,
+        "_isFragment": true
+      },
+      "_isInterface": true
+    },
+    "signer": "<SignerWithAddress 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266>"
+  },
   "PancakeV3Factory": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
   "PancakeV3PoolDeployer": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-  "PancakeV3FactoryOwner": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
   "SwapRouter": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
   "V3Migrator": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
   "TickLens": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
-  "ProxyAdmin": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-  "TransparentUpgradeableProxy": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-  "NonfungibleTokenPositionDescriptor": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "NonfungibleTokenPositionDescriptor": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
   "NonfungiblePositionManager": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
   "PancakeInterfaceMulticall": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
   "PancakeV3LmPoolDeployer": "0x5FbDB2315678afecb367f032d93F642f64180aa3"

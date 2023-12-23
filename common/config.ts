@@ -35,6 +35,15 @@ export const configs = {
     cake: '0x8d008B313C1d6C7fE2982F62d32Da7507cF43551',
     smartRouterHelper: '0xdAecee3C08e953Bd5f89A5Cc90ac560413d709E3',
   },
+  modeTestnet: {
+    WNATIVE: '0xB8349Dc6cD9AC6dFbb77d21825f22FA9981D3236',
+    nativeCurrencyLabel: 'ETH',
+    v2Factory: '0xb9B05c16399633828CacabC229aaa4C4cE1e59bE',
+    stableFactory: '0xe6A00f8b819244e8Ab9Ea930e46449C2F20B6609',
+    stableInfo: '0x0A548d59D04096Bc01206D58C3D63c478e1e06dB',
+    cake: '0x32E0DdB7f502D87065091bDa62529337dD2062d0',
+    smartRouterHelper: '0xdAecee3C08e953Bd5f89A5Cc90ac560413d709E3',
+  },
   hardhat: {
     WNATIVE: '0x0000000000000000000000000000000000000000',
     nativeCurrencyLabel: 'BNB',

@@ -9,6 +9,7 @@ import 'hardhat-tracer'
 import '@nomiclabs/hardhat-etherscan'
 import 'solidity-docgen'
 require('dotenv').config({ path: require('find-config')('.env') })
+const evmVersion = 'berlin'
 
 // const bscTestnet: NetworkUserConfig = {
 //   url: 'https://rpc.ankr.com/bsc_testnet_chapel',
@@ -27,7 +28,12 @@ require('dotenv').config({ path: require('find-config')('.env') })
 //   chainId: 56,
 //   // accounts: [process.env.KEY_MAINNET!],
 // }
-
+const modeTestnet: NetworkUserConfig = {
+  url: "https://sepolia.mode.network/",
+  chainId: 919,
+  accounts: [process.env.KEY_MODE!],
+  gasPrice: 5000000000,
+};
 const bscTestnet: NetworkUserConfig = {
   url: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
   chainId: 97,
@@ -64,6 +70,7 @@ const config: HardhatUserConfig = {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MODE && { modeTestnet }),
     // goerli: goerli,
     // mainnet: bscMainnet,
   },
@@ -75,45 +82,50 @@ const config: HardhatUserConfig = {
       {
         version: '0.7.6',
         settings: {
+          evmVersion: 'berlin',
           optimizer: {
             enabled: true,
-            runs: 10,
+            runs: 200,
           },
         },
       },
       {
-        version: '0.8.10',
+        version: '0.8.20',
         settings: {
+          evmVersion,
           optimizer: {
             enabled: true,
-            runs: 10,
+            runs: 200,
           },
         },
       },
       {
         version: '0.6.6',
         settings: {
+          evmVersion,
           optimizer: {
             enabled: true,
-            runs: 10,
+            runs: 200,
           },
         },
       },
       {
         version: '0.5.16',
         settings: {
+          evmVersion,
           optimizer: {
             enabled: true,
-            runs: 10,
+            runs: 200,
           },
         },
       },
       {
         version: '0.4.18',
         settings: {
+          evmVersion,
           optimizer: {
             enabled: true,
-            runs: 10,
+            runs: 200,
           },
         },
       },
@@ -121,27 +133,63 @@ const config: HardhatUserConfig = {
     overrides: {
       '@pancakeswap/v3-core/contracts/libraries/FullMath.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       '@pancakeswap/v3-core/contracts/libraries/TickBitmap.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       '@pancakeswap/v3-core/contracts/libraries/TickMath.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       '@pancakeswap/v3-periphery/contracts/libraries/PoolAddress.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       'contracts/libraries/PoolTicksCounter.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       'contracts/libraries/OracleLibrary.sol': {
         version: '0.7.6',
-        settings: {},
+        settings: {
+          evmVersion,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
     },
   },

@@ -1,6 +1,6 @@
 import { ethers, network } from 'hardhat'
 import { configs } from '@pancakeswap/common/config'
-import { tryVerify } from '@pancakeswap/common/verify'
+// import { tryVerify } from '@pancakeswap/common/verify'
 import { writeFileSync } from 'fs'
 
 async function main() {
@@ -13,20 +13,21 @@ async function main() {
 
   console.log('deploying stable swap contracts')
 
-  const PancakeStableSwapLPFactory = await ethers.getContractFactory("PancakeStableSwapLPFactory")
-  const pancakeStableSwapLPFactory = await PancakeStableSwapLPFactory.deploy()
-  await pancakeStableSwapLPFactory.deployed()
+  // const PancakeStableSwapLPFactory = await ethers.getContractFactory("PancakeStableSwapLPFactory")
+  // const pancakeStableSwapLPFactory = await PancakeStableSwapLPFactory.deploy()
+  // await pancakeStableSwapLPFactory.deployed()
+  // console.log(pancakeStableSwapLPFactory.address)
 
-  const PancakeStableSwapTwoPoolDeployer = await ethers.getContractFactory('PancakeStableSwapTwoPoolDeployer')
-  const pancakeStableSwapTwoPoolDeployer = await PancakeStableSwapTwoPoolDeployer.deploy()
-  await pancakeStableSwapTwoPoolDeployer.deployed()
+  // const PancakeStableSwapTwoPoolDeployer = await ethers.getContractFactory('PancakeStableSwapTwoPoolDeployer')
+  // const pancakeStableSwapTwoPoolDeployer = await PancakeStableSwapTwoPoolDeployer.deploy()
+  // await pancakeStableSwapTwoPoolDeployer.deployed()
 
   const PancakeStableSwapThreePoolDeployer = await ethers.getContractFactory('PancakeStableSwapThreePoolDeployer')
   const pancakeStableSwapThreePoolDeployer = await PancakeStableSwapThreePoolDeployer.deploy()
   await pancakeStableSwapThreePoolDeployer.deployed()
 
   const StableFactory = await ethers.getContractFactory('PancakeStableSwapFactory')
-  const stableFactory = await StableFactory.deploy(pancakeStableSwapLPFactory.address, pancakeStableSwapTwoPoolDeployer.address, pancakeStableSwapThreePoolDeployer.address)
+  const stableFactory = await StableFactory.deploy('0xF84b1bdC7A44e9Bd9A74BE347FfC77410c982F01', '0x379b9386EE3039E5Ea2f97934F60C2Ed7Ae97E32', pancakeStableSwapThreePoolDeployer.address)
   await stableFactory.deployed()
 
   const PancakeStableSwapTwoPoolInfo = await ethers.getContractFactory('PancakeStableSwapTwoPoolInfo')
@@ -45,7 +46,7 @@ async function main() {
   const SmartRouterHelper = await ethers.getContractFactory('SmartRouterHelper')
   const smartRouterHelper = await SmartRouterHelper.deploy()
   console.log('SmartRouterHelper deployed to:', smartRouterHelper.address)
-  await tryVerify(smartRouterHelper)
+  // await tryVerify(smartRouterHelper)
 
   /** SmartRouter */
   console.log('Deploying SmartRouter...')
@@ -65,15 +66,15 @@ async function main() {
   )
   console.log('SmartRouter deployed to:', smartRouter.address)
 
-  await tryVerify(smartRouter, [
-    config.v2Factory,
-    pancakeV3PoolDeployer_address,
-    pancakeV3Factory_address,
-    positionManager_address,
-    stableFactory.address,
-    pancakeStableSwapTwoPoolInfo.address,
-    config.WNATIVE,
-  ])
+  // await tryVerify(smartRouter, [
+  //   config.v2Factory,
+  //   pancakeV3PoolDeployer_address,
+  //   pancakeV3Factory_address,
+  //   positionManager_address,
+  //   stableFactory.address,
+  //   pancakeStableSwapTwoPoolInfo.address,
+  //   config.WNATIVE,
+  // ])
 
   /** MixedRouteQuoterV1 */
   const MixedRouteQuoterV1 = await ethers.getContractFactory('MixedRouteQuoterV1', {
@@ -107,7 +108,7 @@ async function main() {
   const quoterV2 = await QuoterV2.deploy(pancakeV3PoolDeployer_address, pancakeV3Factory_address, config.WNATIVE)
   console.log('QuoterV2 deployed to:', quoterV2.address)
 
-  await tryVerify(quoterV2, [pancakeV3PoolDeployer_address, pancakeV3Factory_address, config.WNATIVE])
+  // await tryVerify(quoterV2, [pancakeV3PoolDeployer_address, pancakeV3Factory_address, config.WNATIVE])
 
   /** TokenValidator */
   const TokenValidator = await ethers.getContractFactory('TokenValidator', {
@@ -118,7 +119,7 @@ async function main() {
   const tokenValidator = await TokenValidator.deploy(config.v2Factory, positionManager_address)
   console.log('TokenValidator deployed to:', tokenValidator.address)
 
-  await tryVerify(tokenValidator, [config.v2Factory, positionManager_address])
+  // await tryVerify(tokenValidator, [config.v2Factory, positionManager_address])
 
   const contracts = {
     SmartRouter: smartRouter.address,
