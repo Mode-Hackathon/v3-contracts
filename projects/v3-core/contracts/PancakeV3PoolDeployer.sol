@@ -32,7 +32,7 @@ contract PancakeV3PoolDeployer is IPancakeV3PoolDeployer {
 
     constructor(address _SFSAddress) {
         SFSAddress = _SFSAddress;
-        Register(SFSAddress).register(tx.origin);
+        Register(SFSAddress).register(msg.sender);
     }
 
     function setFactoryAddress(address _factoryAddress) external {
