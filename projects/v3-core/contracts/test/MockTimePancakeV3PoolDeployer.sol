@@ -14,6 +14,8 @@ contract MockTimePancakeV3PoolDeployer is IPancakeV3PoolDeployer {
         int24 tickSpacing;
     }
 
+    address SFSAddress;
+
     Parameters public override parameters;
 
     event PoolDeployed(address pool);
@@ -27,7 +29,7 @@ contract MockTimePancakeV3PoolDeployer is IPancakeV3PoolDeployer {
     ) external override returns (address pool) {
         parameters = Parameters({factory: factory, token0: token0, token1: token1, fee: fee, tickSpacing: tickSpacing});
         pool = address(
-            new MockTimePancakeV3Pool{salt: keccak256(abi.encodePacked(token0, token1, fee, tickSpacing))}()
+            new MockTimePancakeV3Pool{salt: keccak256(abi.encodePacked(token0, token1, fee, tickSpacing))}(SFSAddress)
         );
         emit PoolDeployed(pool);
         delete parameters;

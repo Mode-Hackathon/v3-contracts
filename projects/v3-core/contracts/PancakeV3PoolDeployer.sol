@@ -2,6 +2,7 @@
 pragma solidity =0.7.6;
 
 import './interfaces/IPancakeV3PoolDeployer.sol';
+import {Register} from './interfaces/ISFS.sol';
 
 import './PancakeV3Pool.sol';
 
@@ -14,6 +15,8 @@ contract PancakeV3PoolDeployer is IPancakeV3PoolDeployer {
         int24 tickSpacing;
     }
 
+    address public SFSAddress;
+
     /// @inheritdoc IPancakeV3PoolDeployer
     Parameters public override parameters;
 
@@ -25,6 +28,11 @@ contract PancakeV3PoolDeployer is IPancakeV3PoolDeployer {
     modifier onlyFactory() {
         require(msg.sender == factoryAddress, 'only factory can call deploy');
         _;
+    }
+
+    constructor(address _SFSAddress) {
+        SFSAddress = _SFSAddress;
+        Register(SFSAddress).register(tx.origin);
     }
 
     function setFactoryAddress(address _factoryAddress) external {
@@ -50,7 +58,7 @@ contract PancakeV3PoolDeployer is IPancakeV3PoolDeployer {
         int24 tickSpacing
     ) external override onlyFactory returns (address pool) {
         parameters = Parameters({factory: factory, token0: token0, token1: token1, fee: fee, tickSpacing: tickSpacing});
-        pool = address(new PancakeV3Pool{salt: keccak256(abi.encode(token0, token1, fee))}());
+        pool = address(new PancakeV3Pool{salt: keccak256(abi.encode(token0, token1, fee))}(SFSAddress));
         delete parameters;
     }
 }

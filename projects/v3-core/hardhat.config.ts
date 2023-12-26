@@ -28,7 +28,7 @@ const LOWEST_OPTIMIZER_COMPILER_SETTINGS = {
     evmVersion: 'berlin',
     optimizer: {
       enabled: true,
-      runs: 200,
+      runs: 100,
     },
     metadata: {
       bytecodeHash: 'none',
@@ -42,7 +42,7 @@ const DEFAULT_COMPILER_SETTINGS = {
     evmVersion: 'berlin',
     optimizer: {
       enabled: true,
-      runs: 200,
+      runs: 100,
     },
     metadata: {
       bytecodeHash: 'none',
@@ -80,6 +80,7 @@ const modeTestnet: NetworkUserConfig = {
   accounts: [process.env.KEY_MODE!],
   gasPrice: 9000000000,
 };
+
 
 export default {
   networks: {
