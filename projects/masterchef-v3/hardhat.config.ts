@@ -41,6 +41,7 @@ const modeTestnet: NetworkUserConfig = {
   url: "https://sepolia.mode.network/",
   chainId: 919,
   accounts: [process.env.KEY_MODE!],
+  gasPrice: 1000000,
 };
 
 const config = {

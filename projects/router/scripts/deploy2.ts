@@ -128,7 +128,7 @@ async function main() {
     QuoterV2: quoterV2.address,
     TokenValidator: tokenValidator.address,
     stableFactory: stableFactory.address,
-    swapInfo: PancakeStableSwapTwoPoolInfo
+    swapInfo: pancakeStableSwapTwoPoolInfo.address
   }
 
   writeFileSync(`./deployments/${network.name}.json`, JSON.stringify(contracts, null, 2))
